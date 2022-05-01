@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* transition: 10s; */
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Overpass', sans-serif;
+}
+
+.container {
+    background-color: rgb(39, 39, 39);
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 320px;
+    height: 300px;
+    border-radius: 20px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-justify: initial;
+
+}
+
+.etoile {
+    align-self: flex-start;
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: beige;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    background-color: rgb(54, 54, 54);
+    justify-content: center;
+}
+img{
+    height: 10px;
+}
+
+p {
+    font-size: 15px;
+    text-align: center;
+
+    color: rgb(162, 162, 162);
+}
+
+.number {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+:hover.num {
+    background-color: rgb(149, 139, 127);
+}
+:hover.submit{
+    background-color: orange;
+    color: rgb(84, 79, 79);
+}
+
+.num {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgb(54, 54, 54);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    margin: 20px 15px 20px 0;
+
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    color: rgb(114, 109, 88);
+
+}
+
+button {
+    width: 80%;
+    border-radius: 50px;
+    height: 30px;
+    cursor: pointer;
+    color: rgb(228, 171, 64);
+    padding: 5px;
+
+}
+
+#container{
+
+    display: block;
+    display: none;
+}
+#image2{
+    width: 100px;
+    height: 80px;
+}
+#thank{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    
+}
+#selected{
+    width: 65%;
+    text-align: center;
+    background-color: rgb(48, 48, 48);
+    border-radius: 20px;
+    color: orange;
+    margin-top: 20px;
+   
+}

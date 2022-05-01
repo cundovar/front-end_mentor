@@ -1,0 +1,812 @@
+html {
+    font-size: 100%
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Overpass", sans-serif;
+    color: #25252d;
+    font-size: 1.0625rem;
+    overflow-x: hidden;
+    width: 100%
+}
+
+.container {
+    max-width: 93.125rem
+}
+
+a {
+    text-decoration: none
+}
+
+ul {
+    margin: 0;
+    padding: 0
+}
+
+.button:link,
+.button:visited {
+    display: inline-block;
+    border-radius: 30px;
+    white-space: nowrap;
+    font-weight: 600;
+    transition: all 300ms ease-in-out;
+    font-family: "Ubuntu", sans-serif;
+    color: #fff
+}
+
+h1,
+h2,
+h3,
+p {
+    margin-top: 0
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Ubuntu", sans-serif
+}
+
+p {
+    font-family: "Overpass", sans-serif;
+    font-size: 1.11875rem;
+    line-height: 1.5;
+    font-weight: 300
+}
+
+@media screen and (min-width: 1000px) {
+    .show-on-mobile {
+        display: none !important
+    }
+}
+
+.hero {
+    background-image: linear-gradient(to bottom, #ff8f70, #ff3d54);
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+    color: white;
+    border-bottom-left-radius: 5.5rem;
+    position: relative;
+    overflow: hidden;
+    height: 92vh
+}
+
+.hero__img {
+    left: -34rem;
+    position: absolute;
+    top: -73rem;
+    width: 171rem
+}
+
+@media screen and (min-width: 1000px) {
+    .hero {
+        min-height: auto;
+        height: 75vh
+    }
+}
+
+.hero__wrapper {
+    max-width: 1000px;
+    height: 100%;
+    margin: 0px auto;
+    padding-top: 2rem
+}
+
+.hero__wrapper header {
+    margin-bottom: 9.6rem
+}
+
+.hero nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative
+}
+
+.hero__logo {
+    margin-right: 5.5rem
+}
+
+.hero__menu {
+    display: flex;
+    flex-direction: column
+}
+
+.hero__menu img {
+    width: 100%
+}
+
+.hero__text {
+    text-align: center;
+    position: relative
+}
+
+.hero__title {
+    font-family: "Overpass", sans-serif;
+    font-size: 2.3375rem;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 1.6875rem
+}
+
+@media screen and (min-width: 38.75rem) {
+    .hero__title {
+        font-size: 3rem;
+        margin-bottom: 0.9375rem
+    }
+}
+
+@media screen and (min-width: 62.5rem) {
+    .hero__title {
+        font-size: 3.2rem;
+        margin-bottom: 0.9375rem
+    }
+}
+
+.hero__description {
+    margin-bottom: 2.5rem
+}
+
+@media screen and (min-width: 38.75rem) {
+    .hero__description {
+        font-size: 1.14rem
+    }
+}
+
+@media screen and (min-width: 62.5rem) {
+    .hero__description {
+        font-size: 1.3125rem;
+        margin-bottom: 3.4375rem
+    }
+}
+
+.hero__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative
+}
+
+.hero__btn .button {
+    padding: 1.0625rem 1.25rem;
+    border-radius: 100px
+}
+
+.hero__btn .button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2)
+}
+
+.hero__btn .button:active {
+    transform: translateY(-1px);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2)
+}
+
+.hero__btn .button--filled {
+    background-color: #fff;
+    color: #ff525d;
+    margin-right: 1rem
+}
+
+.hero__btn .button--filled:hover {
+    background-color: #ff7a85;
+    color: #fff
+}
+
+.hero__btn .button--filled:active {
+    background-color: rgba(255, 82, 93, 0.8)
+}
+
+.hero__btn .button--transparent {
+    background-color: transparent;
+    border: 2px solid #fff
+}
+
+.hero__btn .button--transparent:hover {
+    color: #ff7a85;
+    background-color: #fff
+}
+
+.hero__btn .button--transparent:active {
+    background-color: rgba(255, 255, 255, 0.8)
+}
+
+@media screen and (min-width: 62.5rem) {
+    .hero__btn .button {
+        padding: 1.2875rem 2.2125rem
+    }
+}
+
+@media screen and (min-width: 62.5rem) {
+    .hero__btn {
+        margin-top: -1.5625rem
+    }
+}
+
+.hero .nav {
+    list-style: none;
+    margin: 0;
+    color: white;
+    display: flex;
+    margin-right: auto
+}
+
+.hero .nav .dropdown {
+    list-style: none;
+    padding: 0 2.0625rem;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 0.5rem;
+    max-height: 0;
+    left: -1rem;
+    top: 2rem;
+    z-index: 3;
+    box-shadow: 0 0 13px rgba(0, 0, 0, 0.3);
+    transition: max-height 0.3s ease;
+    width: 11.25rem;
+    overflow: hidden
+}
+
+.hero .nav .dropdown .dropdown__item {
+    margin-top: 1.75rem;
+    margin-bottom: 1.75rem
+}
+
+.hero .nav .dropdown .dropdown__item a {
+    color: #25252d;
+    display: block;
+    position: relative;
+    transition: all 300ms ease-in-out
+}
+
+.hero .nav .dropdown .dropdown__item a:hover {
+    font-weight: bold
+}
+
+.hero .nav .nav-item {
+    margin-right: 2.6875rem;
+    transition: all 300ms ease-in-out;
+    position: relative
+}
+
+.hero .nav .nav-item img {
+    transition: all 300ms ease-in-out
+}
+
+.hero .nav .nav-item:hover {
+    text-decoration: underline
+}
+
+.hero .nav .nav-item:hover img {
+    transform: rotate(180deg)
+}
+
+.hero .nav .nav-item:hover .dropdown {
+    max-height: 18.75rem
+}
+
+.hero .nav a {
+    color: white
+}
+
+@media screen and (max-width: 1000px) {
+    .hero .nav {
+        display: none
+    }
+}
+
+.hero .cta-buttons .button--transparent {
+    margin-right: 0.7875rem;
+    padding: 0.9875rem 2.8125rem;
+    position: relative
+}
+
+.hero .cta-buttons .button--transparent::after {
+    content: "";
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 30px;
+    z-index: 0
+}
+
+.hero .cta-buttons .button--transparent:hover {
+    color: #25252d
+}
+
+.hero .cta-buttons .button--transparent:hover::after {
+    background-color: white;
+    animation-name: btnAnimate;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards
+}
+
+.hero .cta-buttons .button--filled {
+    color: #ff7a85;
+    background-color: #fff;
+    padding: 0.9875rem 2.8125rem
+}
+
+.hero .cta-buttons .button--filled:hover,
+.hero .cta-buttons .button--filled:active {
+    background-color: #ff7a85;
+    color: #fff
+}
+
+.hero .cta-buttons .button--filled:hover {
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px)
+}
+
+.hero .cta-buttons .button--filled:active {
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-1px)
+}
+
+@media screen and (max-width: 1000px) {
+    .hero .cta-buttons {
+        display: none
+    }
+}
+
+.mobile-active {
+    display: block !important
+}
+
+@keyframes btnAnimate {
+    0% {
+        opacity: 1;
+        color: #fff
+    }
+
+    80% {
+        transform: scaleX(1.3) scaleY(1.1)
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+.mobile__menu {
+    background-color: #fff;
+    position: absolute;
+    overflow: auto;
+    top: 5.75rem;
+    left: 50%;
+    display: none;
+    transform: translateX(-50%);
+    width: 22.3125rem;
+    border-radius: 0.5rem;
+    padding: 2.5rem 1.625rem;
+    text-align: center;
+    z-index: 3;
+    box-shadow: 10px 20px 30px rgba(0, 0, 0, 0.3)
+}
+
+.mobile__menu a {
+    color: #25252d;
+    display: block;
+    position: relative;
+    transition: all 300ms ease-in-out
+}
+
+.mobile__menu a:hover {
+    font-weight: bold
+}
+
+.mobile__menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.mobile__menu .menu__item {
+    margin-bottom: 2.625rem
+}
+
+.mobile__menu .menu__item img {
+    position: absolute;
+    right: 100px;
+    top: 6px
+}
+
+.mobile__menu .menu__item:hover .submenu {
+    max-height: 18.75rem
+}
+
+.mobile__menu .menu__item:hover img {
+    transform: rotate(180deg)
+}
+
+.mobile__menu .submenu {
+    margin-top: 1.625rem;
+    margin-bottom: 1.625rem;
+    background-color: #efeff1;
+    border-radius: 0.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 300ms ease-in-out
+}
+
+.mobile__menu .submenu .submenu__item {
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem
+}
+
+.mobile__menu hr {
+    border-color: #c8c8cb;
+    opacity: 0.3
+}
+
+.mobile__menu .menu__login {
+    margin-top: 2.3125rem;
+    margin-bottom: 1.75rem
+}
+
+.mobile__menu .menu__button {
+    background: linear-gradient(to right, #ff8f70, #ff3d54);
+    padding: 1.1875rem 2.8125rem;
+    color: #fff
+}
+
+.future {
+    background-color: white;
+    padding-top: 7.1375rem;
+    padding-bottom: 15.75rem;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+    text-align: center
+}
+
+.future__wrapper {
+    max-width: 62.5rem;
+    position: relative;
+    height: 100%;
+    margin: auto
+}
+
+.future__title {
+    font-size: 1.8625rem;
+    color: #1f3f5b;
+    font-family: "Overpass", sans-serif
+}
+
+.future__wrapper>.future__title {
+    margin-bottom: 2.8125rem;
+    position: relative;
+    z-index: 2
+}
+
+@media screen and (min-width: 1000px) {
+    .future__wrapper>.future__title {
+        font-size: 2rem
+    }
+}
+
+.future__img {
+    width: 100%;
+    height: 22.9375rem;
+    margin-bottom: 2.8125rem;
+    background-image: url("../images/illustration-editor-mobile.svg");
+    background-position: center center;
+    background-repeat: no-repeat
+}
+
+.future__img img {
+    width: 100%
+}
+
+.future__info:not(:last-child) {
+    margin-bottom: 3.375rem
+}
+
+.future__info .future__title {
+    margin-bottom: 1.9375rem
+}
+
+@media screen and (min-width: 1000px) {
+    .future__info .future__title {
+        font-size: 1.625rem
+    }
+}
+
+.future__info .future__desc {
+    color: #4b5862;
+    font-weight: 300
+}
+
+@media screen and (min-width: 560px) {
+    .future__info {
+        width: 110%;
+        margin: auto
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .future {
+        height: 911px;
+        overflow-x: hidden
+    }
+
+    .future .future__infos {
+        width: 50%;
+        position: absolute;
+        text-align: left;
+        top: 158px;
+        left: 0
+    }
+
+    .future .future__img {
+        position: absolute;
+        top: 0;
+        width: 93%;
+        height: 145%;
+        background-image: url("../images/illustration-editor-desktop.svg");
+        background-size: 92%;
+        background-position-x: 0;
+        bottom: 0;
+        right: -505px;
+        z-index: 1
+    }
+}
+
+.infrastructure {
+    background-color: #3a3d5c;
+    background-image: url("../../images/bg-pattern-circles.svg");
+    background-repeat: no-repeat;
+    background-position: -6rem -13.9375rem;
+    background-size: 150%;
+    border-top-right-radius: 5.5rem;
+    background-blend-mode: lighten;
+    border-bottom-left-radius: 5.5rem;
+    color: white;
+    padding-top: 12.9375rem;
+    padding-bottom: 6.25rem;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+    text-align: center;
+    position: relative;
+    height: 37.125rem
+}
+
+@media screen and (min-width: 1000px) {
+    .infrastructure {
+        background-position: -45rem -68.9375rem;
+        height: 26.875rem;
+        padding-top: 8.125rem
+    }
+}
+
+.infrastructure__title {
+    font-family: "Overpass", sans-serif;
+    margin-bottom: 1.875rem;
+    font-size: 2.25rem;
+    font-weight: 500
+}
+
+.infrastructure__wrapper {
+    max-width: 62.5rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative
+}
+
+.infrastructure__wrapper .floating-img {
+    position: absolute;
+    width: 114%;
+    height: 12.5rem;
+    flex: 1;
+    top: -348px;
+    left: -13px;
+    max-width: 353px;
+    transform: translateX(-50%);
+    left: 50%
+}
+
+.infrastructure__wrapper .floating-img img {
+    width: 100%
+}
+
+.infrastructure__wrapper .text {
+    flex: 1;
+    text-align: center
+}
+
+@media screen and (min-width: 1000px) {
+    .infrastructure__wrapper {
+        flex-direction: row
+    }
+
+    .infrastructure__wrapper .floating-img {
+        top: -163px;
+        left: 205px;
+        max-width: 51%
+    }
+
+    .infrastructure__wrapper .text {
+        text-align: left;
+        position: absolute;
+        width: 50%;
+        right: 0
+    }
+}
+
+.benefits {
+    padding-top: 5.375rem;
+    padding-bottom: 5.375rem;
+    padding-left: 1.875rem;
+    padding-right: 1.875rem
+}
+
+@media screen and (min-width: 1000px) {
+    .benefits {
+        height: 56.25rem
+    }
+}
+
+.benefits__wrapper {
+    max-width: 1000px;
+    height: 100%;
+    margin: auto
+}
+
+@media screen and (min-width: 1000px) {
+    .benefits__wrapper {
+        position: relative
+    }
+
+    .benefits__wrapper .benefits__features {
+        position: absolute;
+        width: 49%;
+        top: 155px;
+        right: 0
+    }
+}
+
+.benefits__img {
+    position: relative;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 31.25rem;
+    margin-bottom: 3.3125rem
+}
+
+.benefits__img img {
+    width: 100%
+}
+
+.benefits__img .desktop {
+    display: none
+}
+
+@media screen and (min-width: 1000px) {
+    .benefits__img {
+        max-width: none;
+        position: absolute;
+        left: 64px;
+        top: -18px;
+        width: 84%
+    }
+
+    .benefits__img .mobile {
+        display: none
+    }
+
+    .benefits__img .desktop {
+        display: block
+    }
+}
+
+.benefits__feature {
+    text-align: center;
+    margin-bottom: 3.3125rem
+}
+
+@media screen and (min-width: 1000px) {
+    .benefits__feature {
+        text-align: left
+    }
+}
+
+.benefits__title {
+    color: #1f3f5b;
+    font-family: "Overpass", sans-serif
+}
+
+.benefits__desc {
+    color: #1f3f5b
+}
+
+.footer {
+    background-color: #25252d;
+    border-top-right-radius: 5.5rem;
+    padding-top: 5.25rem;
+    padding-bottom: 5.25rem
+}
+
+@media screen and (min-width: 1000px) {
+    .footer {
+        height: 27.9375rem
+    }
+}
+
+.footer__wrapper {
+    max-width: 1000px;
+    margin: auto;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr
+}
+
+@media screen and (min-width: 1000px) {
+    .footer__wrapper {
+        grid-template-columns: repeat(4, 1fr)
+    }
+}
+
+.footer__logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5.25rem;
+    height: 2.625rem
+}
+
+.footer__logo img {
+    height: 100%
+}
+
+@media screen and (min-width: 1000px) {
+    .footer__logo {
+        justify-content: flex-start;
+        align-items: flex-start
+    }
+}
+
+.footer__links--title {
+    color: #fff;
+    font-size: 1.2625rem;
+    margin-bottom: 2.625rem;
+    font-weight: 500
+}
+
+.footer__link {
+    color: #c8c8cb;
+    transition: all 300ms ease-in-out;
+    margin-bottom: 1.25rem;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.1rem
+}
+
+.footer__link:hover {
+    text-decoration: underline
+}
+
+.footer__links {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.footer__links:not(:last-child) {
+    margin-bottom: 3.6875rem
+}
+
+@media screen and (min-width: 1000px) {
+    .footer__links {
+        align-items: flex-start;
+        justify-content: flex-start
+    }
+}
